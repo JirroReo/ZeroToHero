@@ -61,8 +61,8 @@ async function handleAnswer(isCorrect) {
 }
 
 async function handleTen(isCorrect) {
+  const spinner = createSpinner('Processing').start();
   if (isCorrect) {
-    const spinner = createSpinner('Waiting for it to sink in').start();
     await sleep();
     console.clear();
     winner(true);
